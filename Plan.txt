@@ -1,0 +1,1 @@
+background-image: url(/static-assets/images/filler.png),linear-gradient(142deg,#3b2dcf 1%,#a91b78 100%)

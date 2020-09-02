@@ -1,0 +1,158 @@
+article {
+    height: 100vh;
+
+    // background: rgba(0, 0, 0, 0.534);
+    h1.services {
+        text-align: center;
+        font-size: 26px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include res(desktop-small) {
+            margin-top: 70px;
+
+        }
+    }
+
+    @include res(desktop-small) {
+        height: 70vh;
+
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    transform-style: preserve-3d;
+
+    @include res(desktop-small) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.box {
+    width: 100%;
+    height: 24%;
+    background: #020826;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    
+
+    @include res(desktop-small) {
+        width: 250px;
+        height: 340px;
+        border-radius: 20px;
+    }
+
+    &:hover>.bg-icon {
+        opacity: 0.2;
+    }
+
+    &:hover>.circle i {
+        transform: translate3d(0px, 0px, 100px);
+    }
+
+    &:hover>ul li p {
+        opacity: 1;
+
+    }
+
+    &:hover>ul li p:nth-child(1) {
+        transform: translateY(-40px);
+    }
+
+    &:hover>ul li p:nth-child(2) {
+        transform: translateY(-30px);
+    }
+
+    &:hover>ul li p:nth-child(3) {
+        transform: translateY(-20px);
+    }
+
+    &:hover>ul li p:nth-child(4) {
+        transform: translateY(-10px);
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        transform: translate3d(0, 0, 75px);
+        margin-top: 10px;
+
+        @include res(desktop-small) {
+            font-size: 19px;
+        }
+    }
+
+    li {
+        @include res(desktop-small) {
+            margin-top: 70px;
+        }
+    }
+
+    p {
+        transform-style: preserve-3d;
+        color: white;
+        font-size: 12px;
+        opacity: 1;
+        transition: 0.5s;
+        transform: translate3d(0px, 0px, 70px);
+
+
+        @include res(desktop-small) {
+            font-size: 16px;
+            opacity: 0;
+        }
+    }
+
+    .circle {
+        height: 50px;
+        width: 50px;
+        background: rgba(255, 255, 255, 0.479);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5;
+        transform-style: preserve-3d;
+
+        @include res(desktop-small) {
+            height: 90px;
+            width: 90px;
+        }
+
+        i {
+            position: absolute;
+            font-size: 40px;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+            transform: translate3d(0px, 0px, 0px);
+
+        }
+
+    }
+
+    .bg-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s;
+
+
+
+        i {
+            font-size: 200px;
+            color: white;
+            transform: translate(-30%, -40%);
+
+        }
+    }
+}

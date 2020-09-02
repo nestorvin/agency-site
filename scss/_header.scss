@@ -6,14 +6,15 @@ html {
 
 header {
     height: 80vh;
-    background-image: url('../assets/filler.png'), linear-gradient(142deg, #3b2dcf 1%, #a91b78 100%);
-    // background: rgba(0, 0, 0, 0.493);
+    // background-image: url('../assets/filler.png'), linear-gradient(142deg, #3b2dcf 1%, #a91b78 100%);
+    background: rgba(0, 0, 0, 0.493);
     background-position: center;
     background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
 
     &::before {
         content: "";
@@ -23,8 +24,14 @@ header {
         z-index: 10;
         width: 100%;
         background-image: url('../assets/separator_curve.svg');
-        height: 60px;
         transform: rotateY(180deg);
+        height: 20px;
+
+        
+    @include res(desktop-small) {
+        height: 60px;
+
+    }
     }
 
     nav {

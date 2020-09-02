@@ -85,9 +85,11 @@ article {
         text-align: center;
         transform: translate3d(0, 0, 75px);
         margin-top: 10px;
+        font-size: 9px;
 
         @include res(desktop-small) {
-            font-size: 19px;
+            font-size: 15px;
+            padding: 15px;
         }
     }
 
